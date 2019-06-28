@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-const Header = () => {
+const Header = props => {
 	const classes = useStyles();
 	return (
 		<div className={classes.root}>
@@ -37,7 +37,9 @@ const Header = () => {
 					<Typography variant='h6' className={classes.title}>
 						News
 					</Typography>
-					<Button color='inherit'>Login</Button>
+					<Button onClick={props.handleClick} color='inherit'>
+						Login
+					</Button>
 				</Toolbar>
 			</AppBar>
 		</div>

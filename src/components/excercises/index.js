@@ -12,12 +12,12 @@ const useStyles = makeStyles(theme => ({
 	}
 }));
 
-const Exercises = () => {
+const Exercises = props => {
 	const classes = useStyles();
 	return (
 		<Grid container className={classes.root}>
 			<Grid item xs={6}>
-				<Paper className={classes.paper}>Left Pane</Paper>
+				<Paper className={classes.paper}>{props.leftPaneMessage}</Paper>
 			</Grid>
 			<Grid item xs={6}>
 				<Paper className={classes.paper}>Right Pane</Paper>
