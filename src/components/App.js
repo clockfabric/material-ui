@@ -1,12 +1,18 @@
-import React from "react";
-import Button from "@material-ui/core/Button";
+import React, { Component } from "react";
+import { Header, Footer } from "./layouts";
+import Exercises from "./excercises";
 
-function App() {
-  return (
-    <Button variant="contained" color="primary">
-      Hello Material UI
-    </Button>
-  );
+class App extends Component {
+	state = {};
+	render() {
+		return (
+			<React.Fragment>
+				<Header />
+				<Exercises />
+				<Footer />
+			</React.Fragment>
+		);
+	}
 }
 
 export default App;
